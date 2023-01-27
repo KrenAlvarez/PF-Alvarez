@@ -1,0 +1,42 @@
+@use '_commons' as c;
+
+#pie {
+    grid-area: pie;
+    background-color: map-get(c.$colores, "fondo-pie");
+    width: 100%;
+    height: auto;
+}
+.pie__pag {
+    margin: 50px 10px;
+    text-align: center;
+}
+
+.pie__pag__icon {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    a:hover {
+        background: #c57451;
+        transform: .5s;
+        color: grey;
+    }
+    .icon-instagram{
+        color: #fff;
+        content: "\ea92";
+    }
+    p {
+        color: #fff;
+        font-family: sans-serif;
+        margin: 10px;
+    }
+}
+.pie__pag__texto p {
+    font-size: 15px;
+    font-family: sans-serif;
+    width: auto;
+    height: auto;
+    margin: 15px;
+    color: map-get(c.$colores, "letra-pie");
+}

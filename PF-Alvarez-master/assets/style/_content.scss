@@ -1,0 +1,213 @@
+@use '_commons' as c;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+//INICIO DE ESTILO CSS
+#contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr 200px;
+    justify-items: flex-start;
+    grid-template-areas:
+        "cabeza"
+        "principal"
+        "pie"
+    ;
+}
+
+//Inicio estilos para Cabeza(logo)
+#cabeza {
+    grid-area: cabeza;
+    width: 100%;
+}
+
+.encabezado {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado__logo {
+    width: auto;
+    height: 50px;
+    margin: 10px 70px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin: 10px 0px 0px 10px;
+        align-self: center;
+    }
+}
+//Fin Cabeza
+
+//Inicio Principal-vista mobile firt
+#principal {
+    grid-area: principal;
+    width: 100%;
+    height: auto;
+}
+h1 {
+    display: block;
+    width: auto;
+    height: 20vh;
+    font-family: 'Signerica Medium', sans-serif;
+    font-size: 40px;
+    margin: 30px 20px;
+    text-align: center;
+}
+h2 {
+    display: block;
+    width: auto;
+    height: 100px;
+    color: map-get(c.$colores, "letra");
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    background: map-get(c.$colores, "titulo");
+    text-align: center;
+    line-height: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 17px 0px rgba(125, 116, 106, 0.9);
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(125, 116, 106, 0.9);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(125, 116, 106, 0.9);
+}
+
+#fotos {
+    width: 100%;
+    height: auto;
+}
+
+.fotos__inicio__ok{
+    p{
+    font-family: sans-serif;
+    margin: 40px 10px;
+    font-size: 19px;
+    text-align: center;
+    }   
+    img {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 10%);
+        margin: 40px 20px;
+        border-radius: 10px;
+    }
+}
+.fotos__inicio__ok--dif {
+    display: none;
+}
+#subtitulos{
+    display: block;
+    width: auto;
+    height: 100px;
+    font-size: 20px;
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+}
+
+.servicios__demandados {
+    width: auto;
+ } 
+.servicios__demandados__tipo {
+    width: auto;
+    p {
+        font-family: sans-serif;
+        font-size: 20px;
+        background-color: map-get(c.$colores, "servicios");
+        width: auto;
+        height: 60px;
+        margin: 60px 90px;
+        line-height: 3;
+        border-radius: 5px;
+        color: #575859;
+        box-shadow: 0px 0px 24px 8px rgba(0, 0, 0, 0.055);
+    }
+}
+.servicios__demandados__cuerpo {
+    width: auto;
+
+    p {
+        font-family: sans-serif;
+        font-size: 18px;
+        width: 90%;
+        height: auto;
+        color: #575859;
+        margin-left: 20px;
+    }
+}
+// Fin Principal
+//Fin Estilo CSS para index
+
+//Estilos CSS a Servicios
+h2 a {
+    text-decoration: none;
+    &:hover{
+        background-color: #c5bebb;
+        color: #fff;
+        transform: .5s;
+    }
+}
+.menu__servicios ul {
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    gap: 20px;
+    transform: .5s;
+    list-style: none;
+    margin: 50px 10px;
+    color: #fff;
+    font-family: sans-serif;
+
+    li {
+        color: #575859;
+        font-family: sans-serif;
+        font-size: 16px;
+        text-align: center;
+        a{
+            &:link {
+            color: #d18a8a;
+            }
+            &:visited {
+                color: #575859;
+            }
+            &:hover {
+                background-color: #c5bebb;
+                color: #fff;
+                transform: .5s;
+            }
+            
+        }
+    }  
+}
+
+.foto__novia img {
+    width: 80%;
+    margin: 30px 50px;
+}
+//Fin estilos CSS a Servicios
+
+//Estilos CSS a Estudio
+video {
+    width: 100%;
+    height: 500px;
+}
+
+//Fin estilos CSS a Estudio
+
+
+
+
+  

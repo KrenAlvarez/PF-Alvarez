@@ -1,0 +1,53 @@
+@use '_commons' as c;
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    display: block;
+    color: #595857;
+    margin: 10px 30px;
+    position: sticky;
+}
+
+#check:checked~.encabezado__menu ul {
+    left: 0;
+}
+
+.encabezado__menu ul {
+    position: fixed;
+    width: 70%;
+    height: 55vh;
+    background: map-get(c.$colores, "menu-hamb");
+    font-family: sans-serif;
+    top: 110px;
+    left: -100%;
+    text-align: center;
+    transform: .5s;
+    line-height: 30px;
+    z-index: 100;
+
+    li{
+        display: block;
+        margin: 50px 0;
+
+        a{
+            text-decoration: none;
+            padding: 20px;
+            color: map-get(c.$colores, "letra-menu");
+            transition: background-color .5s;
+    
+            &:link{
+                color: rgb(212, 200, 200);
+                text-decoration: none;
+            }
+            
+            &:hover{
+                color: rgb(9, 9, 9);
+                background-color: #fff;
+                border-radius: 3px;
+            }
+        }
+    }
+}
