@@ -192,7 +192,7 @@
     }
     #novias, #social, #quinceaneras, #artistico{
         animation: myAnim 2s ease 0s infinite normal forwards;
-        
+
         @keyframes myAnim {
             0% {
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -203,7 +203,6 @@
             }
         }
     }
-    
     //Vista "contacto" desktop
     .parrafo-contacto{
         display: block;
