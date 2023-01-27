@@ -47,26 +47,22 @@
         margin: 0;
         transform: .5s;
         background: #fff;
+        li {
+            display: inline-block;
+            margin: 50px 20px;
+            a {
+                text-decoration: none;
+                color: rgb(128, 124, 124);
+                transition: background-color .10s;
+                &:hover {
+                    color: #fff;
+                    border-bottom: 3px solid;
+                    background-color: rgb(226, 146, 93);
+            
+                }
+            }
+        }  
     }
-
-    .encabezado__menu ul li {
-        display: inline-block;
-        margin: 50px 20px;
-    }
-
-    .encabezado__menu ul li a {
-        text-decoration: none;
-        color: rgb(128, 124, 124);
-        transition: background-color .10s;
-    }
-
-    .encabezado__menu ul li a:hover {
-        color: #fff;
-        border-bottom: 3px solid;
-        background-color: rgb(226, 146, 93);
-
-    }
-
     .checkbtn {
         display: none;
     }
@@ -74,23 +70,8 @@
     h1 {
         font-size: 90px;
         margin: 100px;
-        animation: myAnim 1s ease 0s 1 normal forwards;
         font-family: 'Signerica Medium', sans-serif;
     }
-
-    @keyframes myAnim {
-        0% {
-            opacity: 0;
-            transform: translateY(-50px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-
     h2 {
         width: auto;
         justify-content: center;
@@ -193,12 +174,14 @@
 
     //Servicio vista para desktop
 
-    .foto__novia img {
-        width: 300px;
+    .pic {
+        img {
+        width: auto;
         text-align: center;
         border-radius: 10px;
         margin: 30px 0px 30px 110px;
         box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
+        }
     }
     .menu__servicios ul li a{
         padding: 20px;
@@ -206,6 +189,19 @@
         border-radius: 10px;
         display: flex;
         flex-direction: row;
+    }
+    #novias, #social, #quinceaneras, #artistico{
+        animation: myAnim 2s ease 0s infinite normal forwards;
+        
+        @keyframes myAnim {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        
+            100% {
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+            }
+        }
     }
     
     //Vista "contacto" desktop

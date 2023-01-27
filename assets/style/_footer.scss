@@ -24,12 +24,15 @@
     }
     .icon-instagram{
         color: #fff;
-        content: "\ea92";
     }
     p {
         color: #fff;
         font-family: sans-serif;
         margin: 10px;
+    }
+    a:hover{
+        background-color: #fff;
+        color: #000;
     }
 }
 .pie__pag__texto p {

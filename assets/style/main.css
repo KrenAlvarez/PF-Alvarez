@@ -183,7 +183,7 @@ h2 a:hover {
   transform: 0.5s;
 }
 
-.foto__novia img {
+.pic img {
   width: 80%;
   margin: 30px 50px;
 }
@@ -333,29 +333,7 @@ p {
   h1 {
     font-size: 90px;
     margin: 100px;
-    -webkit-animation: myAnim 1s ease 0s 1 normal forwards;
-            animation: myAnim 1s ease 0s 1 normal forwards;
     font-family: "Signerica Medium", sans-serif;
-  }
-  @-webkit-keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
   h2 {
     width: auto;
@@ -445,8 +423,8 @@ p {
   .pie__pag {
     margin: 10px;
   }
-  .foto__novia img {
-    width: 300px;
+  .pic img {
+    width: auto;
     text-align: center;
     border-radius: 10px;
     margin: 30px 0px 30px 110px;
@@ -458,6 +436,26 @@ p {
     border-radius: 10px;
     display: flex;
     flex-direction: row;
+  }
+  #novias, #social, #quinceaneras, #artistico {
+    -webkit-animation: myAnim 2s ease 0s infinite normal forwards;
+            animation: myAnim 2s ease 0s infinite normal forwards;
+  }
+  @-webkit-keyframes myAnim {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @keyframes myAnim {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
   }
   .parrafo-contacto {
     display: block;
@@ -517,12 +515,15 @@ p {
 }
 .pie__pag__icon .icon-instagram {
   color: #fff;
-  content: "\ea92";
 }
 .pie__pag__icon p {
   color: #fff;
   font-family: sans-serif;
   margin: 10px;
+}
+.pie__pag__icon a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .pie__pag__texto p {
