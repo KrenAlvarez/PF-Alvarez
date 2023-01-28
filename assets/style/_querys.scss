@@ -25,6 +25,7 @@
         width: 100%;
         height: 100px;
         position: fixed;
+        top: 0;
         background-color: #fff;
     }
 
@@ -41,44 +42,46 @@
         width: 95%;
         height: 100px;
         left: 0;
-        position: relative;
+        position: sticky;
         top: 0;
         color: #c0c8cfb9;
         margin: 0;
-        transform: .5s;
         background: #fff;
+
         li {
             display: inline-block;
             margin: 50px 20px;
+
             a {
                 text-decoration: none;
                 color: rgb(128, 124, 124);
                 transition: background-color .10s;
+
                 &:hover {
                     color: #fff;
                     border-bottom: 3px solid;
                     background-color: rgb(226, 146, 93);
-            
+
                 }
             }
-        }  
+        }
     }
+
     .checkbtn {
         display: none;
     }
 
     h1 {
-        font-size: 90px;
         margin: 100px;
-        font-family: 'Signerica Medium', sans-serif;
+        font: 90px 'Signerica Medium', sans-serif;
     }
+
     h2 {
+        display: flex;
         width: auto;
         justify-content: center;
         align-items: center;
-        font-weight: bolder;
-        font-family: sans-serif;
-        font-size: 30px;
+        font: bolder 30px sans-serif;
     }
 
     #fotos {
@@ -93,50 +96,57 @@
         margin: 0px 10px;
         font-size: 18px;
         text-align: center;
+
+        img {
+            width: 67%;
+            height: auto;
+            margin: 0 10px 60px 25px;
+        }
     }
 
-    .fotos__inicio__ok img {
-        width: 75%;
-        height: auto;
-        margin: 0 10px 60px 25px;
-    }
+    .fotos__inicio {
+        margin-top: 15px;
 
-    .fotos__inicio__ok--dif {
-        display: block;
-    }
+        .fotos__inicio__ok--dif {
+            display: block;
 
-    .fotos__inicio__ok--dif img {
-        width: 80%;
-        height: auto;
-        object-fit: contain;
-        box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
-        margin: 40px 20px;
-        border-radius: 10px;
-    }
+            img {
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+                box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
+                margin: 40px 20px;
+                border-radius: 10px;
+            }
 
-    .fotos__inicio__ok--dif p {
-        font-family: sans-serif;
-        margin: 40px 10px;
-        font-size: 18px;
-        text-align: center;
+            p {
+                font: 18px sans-serif;
+                margin: 40px 10px;
+                text-align: center;
+            }
+        }
     }
 
     .fotos__inicio--dis {
         display: flex;
         flex-direction: column-reverse;
+
+        image {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
+            margin: 40px 20px;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
     }
 
-    .fotos__inicio--dis image {
-        width: 80%;
-        height: auto;
-        object-fit: contain;
-        box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
-        margin: 40px 20px;
-        border-radius: 10px;
-    }
-
-    .fotos__inicio--dis p {
-        font-size: 18px;
+    #subtitulos {
+        display: flex;
     }
 
     .servicios {
@@ -160,57 +170,67 @@
     }
 
     .servicios__demandados__cuerpo p {
-        width: 100%;
+        width: auto;
         font-size: 20px;
         font-weight: normal;
     }
 
-    #pie{
-      width: 100%;
-    } 
+    #pie {
+        width: 100%;
+    }
+
     .pie__pag {
         margin: 10px;
     }
 
-    //Servicio vista para desktop
+    //Servicio (vista para desktop)
 
     .pic {
         img {
-        width: auto;
-        text-align: center;
-        border-radius: 10px;
-        margin: 30px 0px 30px 110px;
-        box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
+            width: auto;
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0px 30px 110px;
+            box-shadow: 0px 0px 24px 8px rgb(0 0 0 / 15%);
         }
     }
-    .menu__servicios ul li a{
+
+    .menu__servicios ul li a {
         padding: 20px;
         transition: 0.5s;
         border-radius: 10px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
     }
-    #novias, #social, #quinceaneras, #artistico{
+
+    #novias,
+    #social,
+    #quinceaneras,
+    #artistico {
         animation: myAnim 2s ease 0s infinite normal forwards;
 
         @keyframes myAnim {
             0% {
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             }
-        
+
             100% {
                 box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
             }
         }
     }
-    //Vista "contacto" desktop
-    .parrafo-contacto{
+
+    //Contacto (vista desktop)
+    .parrafo-contacto {
         display: block;
         margin: 100px;
-        p{
+
+        p {
             font-size: 30px;
         }
     }
+
     .formulario {
         display: flex;
         flex-direction: column;
@@ -229,7 +249,11 @@
         color: #000;
     }
 
-    // Vista "Beauty Studio" desktop
+    //Beauty Studio (vista desktop)
+    .mapa {
+        width: 100%;
+    }
+
     iframe {
         display: block;
         margin: 0 300px;
@@ -238,6 +262,12 @@
         height: 400px;
         background: #c5bebb;
     }
-    //Vista Portfolio para desktop
+
+    //Portfolio (vista desktop)
+    .carousel {
+        width: 70%;
+        margin: 30px 220px;
+    }
 }
+
 // Fin query para desktop
