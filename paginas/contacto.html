@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/icomoon/fonts.css">
+  <link rel="stylesheet" href="../assets/icomoon/fonts.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -28,6 +28,7 @@
         <div class="encabezado__logo">
           <a href="../index.html"><img src="../assets/Fotos/logo.jpg" alt="foto de yani bustos" /></a>
         </div>
+        <!-- Inicio menu -->
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
           <span class="material-symbols-outlined">
@@ -43,9 +44,14 @@
               <li><a href="./estudio.html">Beauty Studio</a></li>
               <li><a href="./portfolio.html"> Portfolio</a></li>
               <li><a href="./contacto.html"> Contacto</a></li>
+              <div class="icono__menu">
+                <li><a href="https://www.instagram.com/yanibustosmakeup/?hl=es" target="_blank"><span class="icon-instagram"></span></a></li>
+                <li><a href="https://ar.pinterest.com/bustos3710/" target="_blank"><span class="icon-pinterest2"></span></a></li>
+              </div>
             </ul>
           </nav>
         </div>
+        <!-- Fin menu -->
       </div>
     </header>
     <main id="principal">
@@ -54,6 +60,7 @@
       <div class="parrafo-contacto">
         <p>Dejanos tus datos y nos contactamos con vos!</p>
       </div>
+      <!-- Comienzo formulario -->
       <form class="formulario">
         <label class="datos">Nombre: </label><input type="text" placeholder="Nombre" class="requerido" required />
         <label class="datos">Apellido: </label><input type="text" placeholder="Apellido" class="requerido" />
@@ -70,7 +77,9 @@
         <br />
         <input type="submit" value="Enviar" />
         <input type="reset" value="Limpiar formulario" />
+        <br>
       </form>
+      <!-- Fin formulario -->
     </main>
     <footer id="pie">
       <div class="pie__pag">

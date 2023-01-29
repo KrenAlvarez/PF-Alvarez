@@ -197,13 +197,6 @@ video {
   height: 500px;
 }
 
-.mapa {
-  width: 100%;
-}
-.mapa iframe {
-  width: auto;
-}
-
 .carousel {
   margin: 20px 30px;
 }
@@ -218,6 +211,7 @@ video {
   margin: 10px 30px;
   position: -webkit-sticky;
   position: sticky;
+  top: 80px;
 }
 
 #check:checked ~ .encabezado__menu ul {
@@ -226,16 +220,16 @@ video {
 
 .encabezado__menu ul {
   position: fixed;
-  width: 70%;
-  height: 55vh;
+  width: 97%;
+  height: 90vh;
   background: #993300;
   font-family: sans-serif;
   top: 110px;
   left: -100%;
   text-align: center;
-  transform: 0.5s;
-  line-height: 30px;
+  line-height: 60px;
   z-index: 100;
+  transition: 0.5s;
 }
 .encabezado__menu ul li {
   display: block;
@@ -255,6 +249,20 @@ video {
   color: rgb(9, 9, 9);
   background-color: #fff;
   border-radius: 3px;
+}
+
+.icono__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.icono__menu .icon-instagram:before {
+  content: "\ea92";
+  color: #fff;
+}
+.icono__menu .icon-pinterest2:before {
+  content: "\ead2";
+  color: #fff;
 }
 
 .formulario {
